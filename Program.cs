@@ -4,33 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace exclusion.method
+namespace ITMO.BankAccount
 {
+    
+public enum AccountType { Checking, Deposit }
     internal class Program
     {
         static void Main(string[] args)
+
         {
+            AccountType goldAccount;
 
-            try
-            {
+            AccountType platinumAccount;
 
+            goldAccount = AccountType.Checking;
+            platinumAccount = AccountType.Deposit;
 
-                Console.WriteLine("Введите первое число");
-                string Temp = Console.ReadLine();
-                int i = Int32.Parse(Temp);
+            Console.WriteLine("The Customer Account Type is {0}", goldAccount);
+            Console.WriteLine("The Customer Account Type is {0}", platinumAccount);
 
-                Console.WriteLine("Введите второе число");
-                Temp = Console.ReadLine();
-                int j = Int32.Parse(Temp);
-                
-                int k = i / j;
-                Console.WriteLine("The result of dividing {0} by {1} is {2}", i, j, k);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("An exception was thrown: {0}" , e );
-            }
-            
         }
-}  }
-
+    }
+}
